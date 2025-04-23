@@ -1,0 +1,16 @@
+pygame – A popular Python library for building 2D games, handling graphics, input, and rendering.
+
+numpy – A powerful library for numerical operations and array manipulation.
+
+random – Generates random numbers, used for food placement and initial snake positions.
+
+sys – Provides system-specific parameters and functions, used here to exit the game.
+
+pickle – Serializes and deserializes Python objects like Q-tables to save/load data.
+
+game.snake – It is used to control each snake movement, direction, growth when eating food, and checks for collisions.
+
+game.food – It can used to Handle how food is created, where it appears on the game board, and how it's drawn on the screen.
+
+game.snake_env – It can represent the environment where agents (snakes) interact this can include the game rules, actions, state observations, and rewards used during training.
+
