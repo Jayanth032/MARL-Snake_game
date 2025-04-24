@@ -1,0 +1,35 @@
+What is Q-learning?
+-> Q-learning is a model-free reinforcement learning (RL) algorithm. It learns the optimal policy (best actions to take) without needing a model of the environment.
+
+-> It works by learning a Q-table that estimates the value of taking a given action in a given state, written as:
+                Q(s,a)
+-> This value represents the expected cumulative reward of taking action a from state s, and then following the learned policy.
+
+How it works (the learning loop):
+1. Observe current state s
+
+2. Choose an action a using an ε-greedy policy:
+
+3. Random action (exploration) with probability ε
+
+4. Best known action (exploitation) with probability 1-ε
+
+5. Execute action → observe:
+
+  -> Reward r
+
+  -> Next state s'
+
+  ->Update Q-value for (s, a)
+6. Repeat this loop over many episodes to converge toward optimal behavior.
+
+State Representation:
+-> Relative position of food
+-> Immediate danger in all directions
+-> Current direction of movement
+Actions:
+-> Turn left, go straight, or turn right (relative to current direction)
+Reward Function:
+-> +10 for eating food
+-> -10 for dying (collision with wall or snake)
+-> -0.1 for each step (to encourage efficient paths)
